@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart Page</title>
+</head>
+<body>
+    <h1>Welcome To Chart Page...</h1>
+    <table>
+        <tr><th>Title</th> <th>Emp_Rate</th></tr>
+        {% for x in employedata %} 
+      <tr> <td> {{ x.title }} </td>	<td>{{ x.emp_rate }}</td></tr>
+    {% endfor %}
+    </table>
+
+    <div class="container mt-3">
+        {% block content %}
+    {% autoescape off %}
+        {{ plot_div }}
+    {% endautoescape %}
+    {% endblock content %}
+    </div>
+
+</body>
+</html>

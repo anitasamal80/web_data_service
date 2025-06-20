@@ -1,16 +1,16 @@
 # wds-django
 Django Project - An authenticated web data service using Django, SQLite and Plotly.
 
-# create a virtual environment
+## create a virtual environment
 python -m venv .venv
 
-# Activate the virtual environment from a cmd.exe command prompt
+## Activate the virtual environment from a cmd.exe command prompt
 .venv\Scripts\activate.bat
 
-# Install & Upgrade pip
+## Install & Upgrade pip
 python -m pip install --upgrade pip
 
-# Install your dependencies
+## Install your dependencies
 python -m pip install django
 
 # Check if django has been installed & version

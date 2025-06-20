@@ -1,0 +1,2 @@
+# wds-django
+Django Project

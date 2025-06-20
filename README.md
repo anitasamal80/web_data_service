@@ -37,8 +37,8 @@ python manage.py startapp webdataservice
 ## Created HTML Templates
 ## Added your webdataservice to INSTALLED_APP list in projects settings.py
 
-# Create a data model class in models.py
-# Make Migration scripts
+## Create a data model class in models.py
+## Make Migration scripts
 python manage.py makemigrations
 
 ## migrate the db (create/update the database tables)

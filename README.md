@@ -10,7 +10,9 @@ locate the activate file and on windows run
 
 locate the activate file and on unix run
 
-source .venv/bin/activate
+$source .venv/bin/activate
+
+pip install -r requirements.txt
 
 cd mybaseproject
 

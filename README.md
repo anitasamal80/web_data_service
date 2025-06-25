@@ -1,23 +1,16 @@
-# wds-django
+# Django Project - AWDS
 
-Django Project - An authenticated web data service using Django, SQLite and Plotly. To run this programe you must have python version 3 or higher.
+- An authenticated web data service using Django, SQLite and Plotly. 
 
-python -m venv .venv
-
-locate the activate file and on windows run
-
-.venv\Scripts\activate.bat
-
-locate the activate file and on unix run
-
-$source .venv/bin/activate
-
-pip install -r requirements.txt
+Create virtual environment and install requirements
 
 cd mybaseproject
 
 python manage.py runserver
 
-To stop a server
+Note:-
+Use the following username and password to view chart
 
-ctrl+c
+username: admin
+password: admin
+

@@ -1,4 +1,4 @@
 echo "Preparing to run the server"
 cd mybaseproject
-pip install -r requirements.txt
-python manage.py runserver
+docker build . --tag wds:01
+docker run -p 8000:8000 --name web_data_service wds:01

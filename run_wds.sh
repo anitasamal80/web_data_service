@@ -1,5 +1,4 @@
 echo "Preparing to run the server"
-
-pip install -r requirements.txt
 cd mybaseproject
+pip install -r requirements.txt
 python manage.py runserver

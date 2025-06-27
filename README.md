@@ -23,10 +23,3 @@ For Linux:
 
 The default development server IP should be http://localhost:8000/
 
-Note:-
-Use the following username and password to view chart
-
-username: admin
-password: admin
-
-Use the browser back button to get to the login page to logout.

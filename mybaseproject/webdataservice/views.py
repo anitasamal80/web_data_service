@@ -1,7 +1,9 @@
 from multiprocessing import context
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
+from django.contrib.auth.forms import UserCreationForm
+
 
 #for Authenticated view
 from django.contrib.auth.decorators import login_required
@@ -16,6 +18,22 @@ from .models import Emp_data
 
 # Create your views here.
 
+def home(request):
+    return render(request, "home.html")
+
+
+def signup(request):
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/charts/') 
+    else:
+        form = UserCreationForm
+    return render(request,"registration/registration.html", {"form" : form})
+
+
+# View for the Chart Page
 
 @login_required
 def chartpage(request):
@@ -37,6 +55,7 @@ def chartpage(request):
     fig.update_yaxes(autorange="reversed")
     
     #Embed the plot in an HTML div tag
+    
     gantt_plot = plot(fig, output_type="div")
     context = {'employedata': emp_data, 'plot_div': gantt_plot}
     

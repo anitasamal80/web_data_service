@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{% block title %}WDS{% endblock %}</title>
+    <title>{% block title %}WDS{% endblock title %}</title>
   </head>
   <body>
     <div style="float: right">
@@ -11,7 +11,7 @@
       <form
         id="logout-form"
         method="post"
-        action="{% url 'logout' %}"
+        action="{%url 'logout' %}"
         style="display: inline"
       >
         {% csrf_token %}
@@ -30,6 +30,6 @@
       </form>
       {% else %} {#<a href="{% url 'login' %}">Login</a> #} {% endif %}
     </div>
-    {% block content %} {% endblock content %}
+    {% block content %} This is the content area {% endblock content %}
   </body>
 </html>

@@ -1,0 +1,28 @@
+# Define containers for the two applications
+services:
+  #Build from the docker file
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    # Create a volume for app directory
+    volumes:
+      - "app-data:/app"
+  # Create a Metabase container
+  metabase:
+    image: "metabase/metabase"
+    # define environment variable for metabase data file
+    environment:
+      MB_DB_FILE: "/metabase-data/metabase.db"
+    ports:
+      - "3000:3000"
+    # mount the same volume to share data from my web container
+    # bind a volume to read pre-configured metabase data from my project
+    volumes:
+      - "app-data:/data/emp_data"
+      - type: bind
+        source: ./metabase-data
+        target: /metabase-data
+# define the docker managed volume
+volumes:
+  app-data:

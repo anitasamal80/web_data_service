@@ -1,4 +1,3 @@
-echo "Preparing to run the server"
+#Run docker compose to start the container as services
 cd mybaseproject
-docker build . --tag wds:01
-docker run -p 8000:8000 --name web_data_service wds:01
+docker-compose up -d

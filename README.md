@@ -1,11 +1,12 @@
 # Django Project - AWDS
 
-- An authenticated web data service using Django, SQLite and Plotly.It shows employee rate chart year on year.
+- An example of authenticated web data service using Django, SQLite and Plotly.It shows employee rate chart year on year.Data visualisation using Metabase.
 
 ## Features
 
 - Visualize data using Plotly
-- User authentication
+- User Registration and Authentication
+- Data Visualisation using Metabase
 
 ## Installation
 
@@ -21,12 +22,8 @@ For Linux:
 ./run_wds.sh
 ```
 
-The default development server IP should be http://localhost:8000/
-
-Note:-
-Use the following username and password to view chart
-
-username: admin
-password: admin
-
-Use the browser back button to get to the login page to logout.
+web application development server IP should be http://localhost:8000/
+Metabase server url:-http://localhost:3000/
+For Metabase
+Username - a.user@email.com
+Password - ab1cd25#
